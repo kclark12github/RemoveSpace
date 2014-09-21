@@ -91,28 +91,22 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-
 Private Sub cmdCancel_Click()
    Me.Hide
    txtPath.Text = ""
 End Sub
-
 Private Sub cmdOK_Click()
    Me.Hide
 End Sub
-
 Private Sub dirFolders_Change()
    txtPath.Text = dirFolders.Path
 End Sub
-
 Private Sub drvFolders_Change()
    dirFolders.Path = UCase(drvFolders.Drive)
 End Sub
-
 Private Sub Form_Load()
    dirFolders_Change
 End Sub
-
 Private Sub txtPath_Change()
    Dim Drive As String
    Dim Directory As String
